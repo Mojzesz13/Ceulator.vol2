@@ -1,13 +1,13 @@
 import React from 'react';
 import "./toolbar.scss";
-import hamburger from "../../assets/onion1.png";
-import tlo from "../../assets/navBackground";
+import hamburger from "../../assets/onionHamburger.png";
+import background from "../../assets/navBackground";
 
-const Toolbar = (props) => {
+const Toolbar = ({show}) => {
     return (
-        <header className="toolbar" style={{backgroundImage: "url(" + tlo + ")"}}>
+        <header className="toolbar" style={{backgroundImage: `url("${background}")`}}>
             <nav className="toolbarNavigation">
-                <div><img className="hamburger" src={hamburger} alt="onion"/></div>
+                <div><img className="hamburger" src={hamburger} alt="onion" onClick={show}/></div>
                 <div className="toolbarLogo"><a href="/">Cebulator</a></div>
                 <div className="spacer"/>
                 <div className="toolbarItems">

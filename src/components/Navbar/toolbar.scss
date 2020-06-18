@@ -1,15 +1,15 @@
 @import "./src/scss/mixin";
-@import "./src/scss/fonts";
-@import "./src/scss/colors";
+@import "../../scss/fonts";
+@import "../../scss/colors";
 
 .toolbar {
   width: 100vw;
-  height: 15%;
+  height: 12%;
   position: fixed;
   display: flex;
   color: antiquewhite;
   font-family: $font-base;
-  @include boxShadow;
+  @include boxShadow(0, 8px, 6px, -6px, rgba(0, 0, 0, 1));
 
   .toolbarNavigation {
     width: 100%;
