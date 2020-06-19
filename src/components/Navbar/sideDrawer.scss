@@ -5,16 +5,19 @@
 .sideDrawerContainer {
   height: 100%;
   width: 67%;
+  margin-top: 6rem;
   position: fixed;
   z-index: 200;
   background-position: center;
   background-size: cover;
-  transform: translateX(-100);
-  transition: 3s ease-out;
+  transform: translateX(-100%);
+  transition: transform 1s ease-out;
   @include boxShadow(6px, -1px, 27px, 0px, rgba(33, 173, 37, 1));
 
   .sideDrawerContainer.open {
-    transform: translateX(0);
+    transform: translateX(100);
+    transition: transform 1s ease-out;
+
   }
 
   ul {

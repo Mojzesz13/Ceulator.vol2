@@ -2,11 +2,11 @@ import React from 'react';
 import "./backdrop.scss";
 import background from "../../assets/backdropBackground.png"
 
-const Backdrop = ({show}) => {
+const Backdrop = ({hide}) => {
     return (
         <div className="backdrop"
              style={{backgroundImage:`url(${background})`}}
-             onClick={show}>
+             onClick={hide}>
         </div>
     );
 };

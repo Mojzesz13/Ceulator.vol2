@@ -4,26 +4,27 @@ import Toolbar from "./toolbar";
 import SideDrawer from "./sideDrawer";
 import Backdrop from "./backdrop";
 
-
 const Navbar = () => {
-    const[sideDrawerOpen, setSideDrawerOpen] = useState(false)
+    const [sideDrawerOpen, setSideDrawerOpen] = useState(false)
 
     const drawerToggleClickHandler = () => {
-        setSideDrawerOpen(!sideDrawerOpen)
+        setSideDrawerOpen(prevState => (!prevState) )
     }
 
-    let sideDrawer;
+    const backDropClickHandler = () => {
+        setSideDrawerOpen(false)
+    }
+
     let backdrop;
 
-    if(sideDrawerOpen) {
-        sideDrawer = <SideDrawer show={drawerToggleClickHandler}/>
-        backdrop = <Backdrop show={drawerToggleClickHandler}/>
+    if (sideDrawerOpen) {
+        backdrop = <Backdrop hide={backDropClickHandler}/>
     }
 
     return (
         <div>
             <Toolbar show={drawerToggleClickHandler}/>
-            {sideDrawer}
+            <SideDrawer show={sideDrawerOpen}/>
             {backdrop}
         </div>
     );

@@ -6,7 +6,8 @@ const SideDrawer = ({show}) => {
 
     let drawerClasses = "sideDrawerContainer";
 
-    if(show){
+    if(!show){
+        console.log({show})
         drawerClasses = "sideDrawerContainer open";
     }
 
